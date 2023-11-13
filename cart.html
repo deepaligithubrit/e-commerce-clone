@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Cart Page</title>
+    
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="cart.css">
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/733718af8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+  
+  </head>
+  <body>
+ 
+      
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+   <header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+      <h1 class="header__title">
+        Cart Page
+        <span class="header__subtitle">Products</span>
+      </h1>
+    </div>
+    <div class="header__cart">
+      <ul>
+        <li class="header__submenu" id="submenu">
+          <button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> Your Cart</button>
+          <div id="shopping-cart" class="shopping-cart-container">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p>
+            <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header__main">
+    <p class="display-title text-light">
+      Cart Page
+    </p>
+  </div>
+  <div class="arrow"><svg width="24" height="24" viewBox="0 0 24 24">
+  <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+</svg></div>
+</header>
+
+<main class="container page-content">
+  <row>
+    <h2 class="page-title">New Products</h2>
+  <div class="grid" id="grid">
+    <div class="card-md-3">
+        <img src="Img/watch.jpg" class="card__image" style="width: 100%; height: 250x;">
+        <div class="card__info">
+          <h4 class="card__title">Watch</h4>
+          
+          <p class="card__price"><i class="fa fa-inr" aria-hidden="true"></i> 1,599/</p>
+          <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+        </div>
+      </div>
+    <!--.card-->
+    <div class="card-md-3">
+      <img src="Img/OIP (1).jpg" class="card__image" style="width: 100%; height: 250x;">
+      <div class="card__info">
+        <h4 class="card__title">Iphone with Free Watch</h4>
+        
+        <p class="card__price"><i class="fa fa-inr" aria-hidden="true"></i> 54,999/</p>
+        <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="Img/OIP (2).jpg" class="card__image" style="width: 100%; height: 250x;">
+      <div class="card__info">
+        <h4 class="card__title">Makeup Bursh</h4>
+      
+        <p class="card__price"><i class="fa fa-inr" aria-hidden="true"></i> 299/</p>
+        <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="Img/download (2).jpg" style="width: 100%; height: 250x;" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Cannon HD Camera</h4>
+        
+        <p class="card__price"><i class="fa fa-inr" aria-hidden="true"></i>7,199/</p>
+        <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="Img/headphones-yellow-background-music-black-wallpaper.jpg" style="width: 100%; height: 250x;" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">HeadPhone</h4>
+        
+        <p class="card__price"><i class="fa fa-inr" aria-hidden="true"></i> 1,499/</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="Img/shoes.jpg" style="width: 100%; height: 250x;" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Shoe</h4>
+       
+        <p class="card__price"><i class="fa fa-inr" aria-hidden="true"></i> 1,499/</p>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="Img/smartwatch.jpg" style="width: 100%; height: 250x;" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Smartwatch</h4>
+      
+        <p class="card__price"><i class="fa fa-inr" aria-hidden="true"></i> 2,999/</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+  </div>
+  </row>
+</main>
+
+
+  
+  <script  src="index.js"></script>
+  </body>
+</html>
